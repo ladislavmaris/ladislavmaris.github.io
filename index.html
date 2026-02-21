@@ -11,8 +11,10 @@
         .name { font-size: 26px; font-weight: bold; margin: 0 0 6px 0; }
         .position { font-size: 16px; font-style: italic; margin: 0 0 14px 0; }
         .institution { font-size: 15px; margin: 0 0 4px 0; }
+        
         a { text-decoration: none; word-break: break-word; transition: opacity 0.2s ease; }
         a:hover { opacity: 0.75; }
+        
         .uniza-link { color: #2b3a64; font-weight: 600; }
         .fbi-link { color: #009A44; font-weight: 600; }
         .contact-link { color: #2b3a64; font-weight: 500; }
@@ -21,15 +23,27 @@
         .scopus { color: #eb6500; font-weight: normal; }
         .wos { color: #7D63BF; font-weight: normal; }
         .linkedin { color: #0077b5; font-weight: normal; }
+        
         .divider { border-top: 1px solid #dddddd; margin: 18px 0; }
         .section { font-size: 14px; }
         .section-title { font-weight: bold; font-size: 14px; margin: 0 0 8px 0; color: #003366; }
         .label { font-weight: bold; }
         p { margin: 8px 0; }
-        @media (max-width: 480px) { body { padding: 12px; } .card { padding: 22px; } .name { font-size: 22px; } }
+
+        /* QR block styling */
+        .qr-block { text-align: center; }
+        .qr-image { width: 180px; max-width: 100%; height: auto; display: block; margin: 10px auto 0 auto; }
+
+        @media (max-width: 480px) { 
+            body { padding: 12px; } 
+            .card { padding: 22px; } 
+            .name { font-size: 22px; } 
+            .qr-image { width: 160px; }
+        }
     </style>
 </head>
 <body>
+
 <div class="card">
     <div class="name">Ing. Ladislav Mariš, PhD.</div>
     <div class="position">Assistant Professor / Researcher</div>
@@ -67,6 +81,15 @@
         <p><span class="label">Scopus:</span> <a class="scopus" href="https://www.scopus.com/authid/detail.uri?authorId=56395435000" target="_blank">56395435000</a></p>
         <p><span class="label">Web of Science:</span> <a class="wos" href="https://www.webofscience.com/wos/author/record/C-2106-2017" target="_blank">C-2106-2017</a></p>
     </div>
+
+    <div class="divider"></div>
+
+    <div class="section qr-block">
+        <div class="section-title">QR Code - Business Card</div>
+        <img class="qr-image" src="qr-code.png" alt="QR Code">
+    </div>
+
 </div>
+
 </body>
 </html>
