@@ -1,30 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ing. Ladislav Mariš, PhD.</title>
+    <title>Ing. Ladislav Mariš, PhD. - Digital Business Card</title>
     <style>
         * { box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background-color: #f4f6f8; margin: 0; padding: 16px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f4f6f8; 
+            margin: 0; 
+            padding: 16px; /* Základné odsadenie pre stredné obrazovky */
+        }
         
-        /* Základná šírka pre mobil a menšie obrazovky */
         .card { 
-            background: #ffffff; padding: 28px; width: 100%; max-width: 480px; 
-            margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-            border-top: 5px solid #003366; text-align: left; 
+            background: #ffffff; 
+            padding: 28px; 
+            width: 100%; 
+            max-width: 480px; 
+            margin: 0 auto; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            border-top: 5px solid #003366; 
+            text-align: left; 
         }
 
         .name { font-size: 26px; font-weight: bold; margin: 0 0 6px 0; }
         .position { font-size: 16px; font-style: italic; margin: 0 0 14px 0; }
         .institution { font-size: 15px; margin: 0 0 4px 0; }
+        
         a { text-decoration: none; word-break: break-word; transition: opacity 0.2s ease; }
         a:hover { opacity: 0.75; }
+        
         .uniza-link { color: #2b3a64; font-weight: 600; }
         .fbi-link { color: #009A44; font-weight: 600; }
         .contact-link { color: #2b3a64; font-weight: 500; }
-        .orcid { color: #a6ce39; } .researchgate { color: #00ccbb; } 
-        .scopus { color: #eb6500; } .wos { color: #7D63BF; } .linkedin { color: #0077b5; }
+        
+        .orcid { color: #a6ce39; } 
+        .researchgate { color: #00ccbb; } 
+        .scopus { color: #eb6500; } 
+        .wos { color: #7D63BF; } 
+        .linkedin { color: #0077b5; }
 
         .divider { border-top: 1px solid #dddddd; margin: 18px 0; }
         .section { font-size: 14px; }
@@ -35,37 +51,53 @@
         .qr-block { text-align: center; }
         .qr-image { width: 180px; max-width: 100%; height: auto; display: block; margin: 10px auto 0 auto; }
 
-        /* Mobilná úprava */
+        /* Úprava pre mobily */
         @media (max-width: 480px) {
             body { padding: 12px; }
             .card { padding: 22px; border-radius: 12px; }
             .name { font-size: 22px; }
+            .position { font-size: 15px; }
+            .section, .section-title { font-size: 13px; }
             .qr-image { width: 160px; }
         }
 
-        /* --- TOTO JE TO ROZŠÍRENIE PRE VEĽKÉ OBRAZOVKY --- */
+        /* Úprava pre veľké obrazovky - IDENTICKÁ SO VZOROM */
         @media (min-width: 1024px) {
-            body { padding: 24px; }
-            .card { max-width: 520px; } /* Tu sme pridali tie extra pixely */
+            body { padding: 40px 24px; } /* 40px zhora/zdola vytvorí ten správny vizuálny odstup */
+            .card { max-width: 520px; }
         }
     </style>
 </head>
 <body>
+
 <div class="card">
     <div class="name">Ing. Ladislav Mariš, PhD.</div>
-    <div class="position">Assistant Professor / Researcher</div>
-    <div class="institution"><a class="uniza-link" href="https://www.uniza.sk/" target="_blank">University of Žilina</a></div>
-    <div class="institution"><a class="fbi-link" href="https://fbi.uniza.sk/" target="_blank">Faculty of Security Engineering</a></div>
+    <div class="position">Assistant Professor</div>
+    
+    <div class="institution">
+        <a class="uniza-link" href="https://www.uniza.sk/" target="_blank">University of Žilina</a>
+    </div>
+    <div class="institution">
+        <a class="fbi-link" href="https://fbi.uniza.sk/" target="_blank">Faculty of Security Engineering</a>
+    </div>
+
     <div class="divider"></div>
-    <div class="section"><p><span class="label">Areas of Expertise:</span> Design of security systems, Software support, Cyber security, Surveillance systems, IT technologies, Artificial Intelligence, Erasmus+ projects, Education.</p></div>
+
+    <div class="section">
+        <p><span class="label">Areas of Expertise:</span> Design of security systems, Software support, Cyber security, Surveillance systems, IT technologies, Artificial Intelligence, Erasmus+ projects, Education.</p>
+    </div>
+
     <div class="divider"></div>
+
     <div class="section">
         <div class="section-title">Contact Information</div>
         <p><span class="label">Email:</span> <a class="contact-link" href="mailto:ladislav.maris@uniza.sk">ladislav.maris@uniza.sk</a></p>
         <p><span class="label">Phone:</span> <a class="contact-link" href="tel:+421415136658">+421 41 513 6658</a></p>
         <p><span class="label">LinkedIn:</span> <a class="linkedin" href="https://www.linkedin.com/in/ladislav-maris" target="_blank">Professional Profile</a></p>
     </div>
+
     <div class="divider"></div>
+
     <div class="section">
         <div class="section-title">Academic Profiles</div>
         <p><span class="label">ORCID:</span> <a class="orcid" href="https://orcid.org/0000-0003-4952-9055" target="_blank">0000-0003-4952-9055</a></p>
@@ -73,11 +105,14 @@
         <p><span class="label">Scopus ID:</span> <a class="scopus" href="https://www.scopus.com/authid/detail.uri?authorId=56395435000" target="_blank">56395435000</a></p>
         <p><span class="label">Web of Science ID:</span> <a class="wos" href="https://www.webofscience.com/wos/author/record/C-2106-2017" target="_blank">C-2106-2017</a></p>
     </div>
+
     <div class="divider"></div>
+
     <div class="section qr-block">
         <div class="section-title">QR Code - Business Card</div>
         <img class="qr-image" src="qr-code.png" alt="QR Code">
     </div>
 </div>
+
 </body>
 </html>
