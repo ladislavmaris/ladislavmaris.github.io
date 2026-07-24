@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ing. Ladislav Mariš, PhD. - Digital Business Card</title>
+    <title>Ing. Ladislav Mariš, PhD. - Digital Business Card & CV</title>
     <style>
         * { box-sizing: border-box; }
         body { 
@@ -11,13 +11,15 @@
             background-color: #f4f6f8; 
             margin: 0; 
             padding: 16px; /* Základné odsadenie pre stredné obrazovky */
+            color: #333333;
+            line-height: 1.5;
         }
         
         .card { 
             background: #ffffff; 
             padding: 28px; 
             width: 100%; 
-            max-width: 480px; 
+            max-width: 600px; 
             margin: 0 auto; 
             border-radius: 10px; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
@@ -25,8 +27,8 @@
             text-align: left; 
         }
 
-        .name { font-size: 26px; font-weight: bold; margin: 0 0 6px 0; }
-        .position { font-size: 16px; font-style: italic; margin: 0 0 14px 0; }
+        .name { font-size: 26px; font-weight: bold; margin: 0 0 6px 0; color: #111111; }
+        .position { font-size: 16px; font-style: italic; margin: 0 0 14px 0; color: #555555; }
         .institution { font-size: 15px; margin: 0 0 4px 0; }
         
         a { text-decoration: none; word-break: break-word; transition: opacity 0.2s ease; }
@@ -44,9 +46,15 @@
 
         .divider { border-top: 1px solid #dddddd; margin: 18px 0; }
         .section { font-size: 14px; }
-        .section-title { font-weight: bold; font-size: 14px; margin: 0 0 8px 0; color: #003366; }
+        .section-title { font-weight: bold; font-size: 15px; margin: 0 0 10px 0; color: #003366; text-transform: uppercase; tracking: 0.5px; }
         .label { font-weight: bold; }
         p { margin: 8px 0; }
+        ul { margin: 6px 0 12px 20px; padding: 0; }
+        li { margin-bottom: 6px; }
+
+        .job-item, .edu-item, .project-item { margin-bottom: 14px; }
+        .job-title { font-weight: bold; color: #2b3a64; }
+        .job-meta { font-size: 13px; color: #666666; margin-bottom: 4px; }
 
         .qr-block { text-align: center; }
         .qr-image { width: 180px; max-width: 100%; height: auto; display: block; margin: 10px auto 0 auto; }
@@ -61,10 +69,10 @@
             .qr-image { width: 160px; }
         }
 
-        /* Úprava pre veľké obrazovky - IDENTICKÁ SO VZOROM */
+        /* Úprava pre veľké obrazovky */
         @media (min-width: 1024px) {
-            body { padding: 40px 24px; } /* 40px zhora/zdola vytvorí ten správny vizuálny odstup */
-            .card { max-width: 520px; }
+            body { padding: 40px 24px; }
+            .card { max-width: 680px; }
         }
     </style>
 </head>
@@ -91,6 +99,7 @@
 
     <div class="section">
         <div class="section-title">Contact Information</div>
+        <p><span class="label">Address:</span> University of Žilina, Faculty of Security Engineering, Univerzitná 8215/1, 010 26 Žilina, Slovakia</p>
         <p><span class="label">Email:</span> <a class="contact-link" href="mailto:ladislav.maris@uniza.sk">ladislav.maris@uniza.sk</a></p>
         <p><span class="label">Phone:</span> <a class="contact-link" href="tel:+421415136658">+421 41 513 6658</a></p>
         <p><span class="label">LinkedIn:</span> <a class="linkedin" href="https://www.linkedin.com/in/ladislav-maris" target="_blank">Professional Profile</a></p>
@@ -112,6 +121,121 @@
         <div class="section-title">QR Code - Business Card</div>
         <img class="qr-image" src="qr-code.png" alt="QR Code">
     </div>
+
+    <!-- START OF CV SECTION -->
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Profile Summary</div>
+        <p>Academic researcher and security engineer specializing in critical infrastructure protection, quantitative risk modeling, converged security, and the integration of Artificial Intelligence (AI) and Information and Communication Technologies (ICT) in security systems. Active coordinator of international research consortia and member of the Competence Center of Cybersecurity UNIZA.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+        
+        <div class="job-item">
+            <div class="job-title">Scientific Secretary</div>
+            <div class="job-meta">Department of Security Management, UNIZA | Oct 2023 – Present</div>
+            <ul>
+                <li>Coordinating scientific research, managing grant scheme participation, and facilitating international academic projects and conferences.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-title">Assistant Professor</div>
+            <div class="job-meta">Faculty of Security Engineering, UNIZA | Aug 2017 – Present</div>
+            <ul>
+                <li>Delivering lectures and practical seminars on Video Surveillance Systems (VSS), Alarm Systems, Introduction to IT, Web Technologies, and Programming (Python).</li>
+                <li>Leading research in quantitative modeling and AI-driven risk assessment for physical protection systems.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-title">University Researcher</div>
+            <div class="job-meta">Crisis Management Research Department, UNIZA | Aug 2015 – Aug 2017</div>
+            <ul>
+                <li>Executed scientific-technical tasks focused on security management and critical infrastructure resilience.</li>
+            </ul>
+        </div>
+
+        <div class="job-item">
+            <div class="job-title">Sales Manager & CEO</div>
+            <div class="job-meta">Markus Capital, s.r.o., Slovakia | Jan 2011 – Aug 2012</div>
+            <ul>
+                <li>Led business negotiations and operational management.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <ul>
+            <li><span class="label">PhD. in Security Management</span> | University of Žilina (2012 – 2015)</li>
+            <li><span class="label">Ing. (MSc.) in Civil Security</span> | University of Žilina (2009 – 2011)</li>
+            <li><span class="label">Bc. (BSc.) in Civil Security</span> | University of Žilina (2006 – 2009)</li>
+            <li><span class="label">Erasmus Study Mobility</span> | Polytechnic Institute of Leiria, Portugal (2008 – 2009)</li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Selected Research Projects</div>
+        <ul>
+            <li><span class="label">V4 ResiCity (International Visegrad Fund):</span> <em>Resilient City Logistics and Supply Chains for Sustainable Competitiveness in the V4 Region.</em> Project Coordinator for UNIZA (2026–2027).</li>
+            <li><span class="label">Erasmus+ DUAL.AI.TEACHer:</span> <em>AI-Powered Teaching and AI Education for Future-Proof Education.</em> Co-investigator (2025–2027).</li>
+            <li><span class="label">APVV-23-0437:</span> <em>Soft target protection strategy and methodology with a focus on elementary, secondary schools and universities.</em> Co-investigator (2024–2027).</li>
+            <li><span class="label">VEGA 1/0257/23:</span> <em>Cyber risk assessment as an essential tool for increasing cyber security in public administration.</em> Co-investigator (2023–2025).</li>
+            <li><span class="label">APVV-20-0457:</span> <em>Monitoring and tracing of movement and contact of persons in medical facilities.</em> Co-investigator (2021–2024).</li>
+            <li><span class="label">Erasmus+ MISCE:</span> <em>Mechatronics for Improving and Standardizing Competences in Engineering.</em> Co-investigator (2022–2025).</li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Selected Publications (Q1/Q2)</div>
+        <ol>
+            <li>Mäkká, K., Šiser, A., <strong>Mariš, L.</strong>, & Kampová, K. (2024). <strong>Impact of Filling Stations: Assessing the Risks and Consequences of the Release of Hazardous Substances.</strong> <em>Applied Sciences</em>, 14(1), 22. DOI: <a class="contact-link" href="https://doi.org/10.3390/app14010022" target="_blank">10.3390/app14010022</a></li>
+            <li>Loveček, T., <strong>Mariš, L.</strong>, & Petrlová, K. (2023). <strong>Use Case of Water Reservoir Protection as a Critical Infrastructure Element in Slovakia Using a Quantitative Approach.</strong> <em>Water</em>, 15(15), 2818. DOI: <a class="contact-link" href="https://doi.org/10.3390/w15152818" target="_blank">10.3390/w15152818</a></li>
+            <li>Loveček, T., Boroš, M., Mäkká, K., & <strong>Mariš, L.</strong> (2023). <strong>Designing of Intelligent Video-Surveillance Systems in Road Tunnels Using Software Tools.</strong> <em>Sustainability</em>, 15(7), 5702. DOI: <a class="contact-link" href="https://doi.org/10.3390/su15075702" target="_blank">10.3390/su15075702</a></li>
+            <li><strong>Mariš, L.</strong>, Zvaková, Z., Kampová, K., & Loveček, T. (2021). <strong>The Influence of Threat Development on the Failure of the System's Symmetry.</strong> <em>Systems</em>, 9(4), 74. DOI: <a class="contact-link" href="https://doi.org/10.3390/systems9040074" target="_blank">10.3390/systems9040074</a></li>
+        </ol>
+        <p><em>(Author of over 100 scientific publications and over 380 citations in Google Scholar)</em></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills & Further Education</div>
+        <p><span class="label">Programming & IT:</span> Python (Data Processing, Object-Oriented, Standard Library), C#, HTML, CSS, JavaScript, PHP, MS Power BI.</p>
+        <p><span class="label">System Design:</span> AutoCAD, SketchUp, IP Video System Design Tool (JVSG), CAD tools for security systems.</p>
+        <p><span class="label">Languages:</span> Slovak (Native), English (B2), Czech (C2), German (A2).</p>
+        <p><span class="label">Recent Certifications:</span></p>
+        <ul>
+            <li><em>Python III - Standard Library & Common Programmer Tasks</em> (IT Learning Slovakia, 2026)</li>
+            <li><em>IPBeja Erasmus Week - Training Mobility</em> (Polytechnic Institute of Beja, Portugal, 2025)</li>
+            <li><em>The Fun of Coding - Computational Thinking</em> (Erasmus+ Course, Split, Croatia, 2024)</li>
+            <li><em>Data Protection and Cybersecurity</em> (Youth Power, 2023)</li>
+        </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+        <div class="section-title">Editorial & Academic Service</div>
+        <ul>
+            <li><span class="label">Editorial Board Member:</span> <em>Crisis Management (Krízový manažment)</em> Journal (Technical Board)</li>
+            <li><span class="label">Active Peer Reviewer:</span> MDPI Journals (<em>Applied Sciences, Sensors, Sustainability, Electronics, Systems</em>) – <em>Certified MDPI Reviewer</em></li>
+            <li><span class="label">International Committee Board:</span> IBIMA International Conferences (Cordoba & Seville, Spain)</li>
+            <li><span class="label">Grant Evaluator:</span> Expert Evaluator for the Cultural and Educational Grant Agency (KEGA), Ministry of Education, Slovakia</li>
+        </ul>
+    </div>
+
 </div>
 
 </body>
